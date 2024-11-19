@@ -1,6 +1,9 @@
 streamlit
 torch
 transformers
+boto3
+safetensors
+werkzeug
 Pillow
-numpy
-requests
+pytz
+
