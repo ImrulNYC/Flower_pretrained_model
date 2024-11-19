@@ -12,9 +12,9 @@ preprocessor_path = os.path.join(current_dir, "preprocessor_config.json")
 model_path = os.path.join(current_dir, "model.safetensors")
 
 # AWS S3 Configuration using Streamlit secrets
-aws_access_key_id = st.secrets["default"]["aws_access_key_id"]
-aws_secret_access_key = st.secrets["default"]["aws_secret_access_key"]
-region_name = st.secrets["default"]["region_name"]
+aws_access_key_id = st.secrets["aws_access_key_id"]
+aws_secret_access_key = st.secrets["aws_secret_access_key"]
+region_name = st.secrets["region_name"]
 
 s3_client = boto3.client(
     "s3",
@@ -80,4 +80,5 @@ def predict_flower(img_path):
         return predicted_label, confidence
     else:
         return None, None
+
 
